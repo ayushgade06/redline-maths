@@ -1,0 +1,12 @@
+{
+ "recorded_at": "2026-11-25T16:47:51+00:00",
+ "model": "claude-opus-5-5",
+ "input": {
+  "prev": "3x + 4 = 19",
+  "curr": "x + 4 = 57"
+ },
+ "response": {
+  "id": "OTHER",
+  "rationale": "To remove the 3 from 3x, you multiplied the right side by 3 instead of doing the inverse operation, and you left the +4 unchanged. Whatever you do to one side must be done to every term on both sides."
+ }
+}

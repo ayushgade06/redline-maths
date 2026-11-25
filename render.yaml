@@ -1,0 +1,15 @@
+# Render Blueprint: one web service (engine + built web app) and nothing else.
+services:
+  - type: web
+    name: redline
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: AI_MODEL
+        value: claude-opus-5-5
+      - key: DATABASE_URL
+        sync: false

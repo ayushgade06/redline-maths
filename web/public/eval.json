@@ -1,0 +1,268 @@
+{
+ "generated_at": "2026-11-25T17:23:07+00:00",
+ "synthetic": {
+  "n_cases": 172,
+  "metrics": [
+   {
+    "label": "Wrong line found exactly",
+    "value": 1.0,
+    "n": 157,
+    "target": "≥ 95%",
+    "note": null
+   },
+   {
+    "label": "False alarms on correct solutions",
+    "value": 0.0,
+    "n": 15,
+    "target": "≤ 5%",
+    "note": null
+   },
+   {
+    "label": "Misconception named as labelled",
+    "value": 0.9171974522292994,
+    "n": 157,
+    "target": "≥ 85%",
+    "note": "Several rules can produce the same line; a mismatch can still be a valid explanation."
+   },
+   {
+    "label": "Error explained by some executable rule",
+    "value": 0.9363057324840764,
+    "n": 157,
+    "target": null,
+    "note": "Offline run: no AI hypotheses."
+   },
+   {
+    "label": "Diagnoses that are verified (not AI guesses)",
+    "value": 1.0,
+    "n": 147,
+    "target": null,
+    "note": null
+   }
+  ],
+  "by_misconception": [
+   {
+    "id": "ARITH_SLIP",
+    "name": "Arithmetic slip",
+    "n": 43,
+    "correct": 32
+   },
+   {
+    "id": "COMBINE_UNLIKE",
+    "name": "Combined unlike terms",
+    "n": 26,
+    "correct": 26
+   },
+   {
+    "id": "DIST_FIRST_ONLY",
+    "name": "Multiplied only the first term in the bracket",
+    "n": 9,
+    "correct": 8
+   },
+   {
+    "id": "DIVIDE_ONE_TERM",
+    "name": "Divided only one term by a number",
+    "n": 25,
+    "correct": 24
+   },
+   {
+    "id": "DIV_BY_VARIABLE",
+    "name": "Divided by an expression that could be zero",
+    "n": 3,
+    "correct": 3
+   },
+   {
+    "id": "MOVE_NO_SIGN_FLIP",
+    "name": "Moved a term across '=' without changing its sign",
+    "n": 29,
+    "correct": 29
+   },
+   {
+    "id": "NEG_DIST_FIRST_ONLY",
+    "name": "Negative distributed to only the first term",
+    "n": 3,
+    "correct": 3
+   },
+   {
+    "id": "SQRT_LOST_NEG_ROOT",
+    "name": "Forgot the ± when taking a square root",
+    "n": 2,
+    "correct": 2
+   },
+   {
+    "id": "SQUARE_OF_SUM",
+    "name": "Squared a sum term by term",
+    "n": 1,
+    "correct": 1
+   },
+   {
+    "id": "TRANSPOSE_MULT_AS_ADD",
+    "name": "Undid multiplication by subtracting",
+    "n": 16,
+    "correct": 16
+   }
+  ]
+ },
+ "hints": {
+  "date": "2026-11-25",
+  "n": 20,
+  "metrics": [
+   {
+    "label": "Hints leaking the answer before the guard",
+    "value": 0.1,
+    "n": 20,
+    "target": null,
+    "note": null
+   },
+   {
+    "label": "Hints leaking the answer after the guard",
+    "value": 0.0,
+    "n": 20,
+    "target": "0%",
+    "note": null
+   }
+  ]
+ },
+ "photos": {
+  "date": "2026-11-25",
+  "n_photos": 3,
+  "note": "Synthetic sample sheets rendered in handwriting fonts — not real handwriting. Real-photo results to be added.",
+  "metrics": [
+   {
+    "label": "Lines transcribed exactly",
+    "value": 1.0,
+    "n": 12,
+    "target": null,
+    "note": null
+   },
+   {
+    "label": "Right line and misconception, end to end",
+    "value": 1.0,
+    "n": 3,
+    "target": null,
+    "note": null
+   }
+  ]
+ },
+ "failures": [
+  {
+   "kind": "Different misconception",
+   "lines": [
+    "5 - 2(x - 3) = 1",
+    "6 - 2x + 6 = 1",
+    "x = 11/2"
+   ],
+   "expected": "ARITH_SLIP",
+   "got": "unclassified"
+  },
+  {
+   "kind": "Different misconception",
+   "lines": [
+    "4x + 9 = 2x + 1",
+    "4x + 9/2 = x + 1/2",
+    "x = -4/3"
+   ],
+   "expected": "DIVIDE_ONE_TERM",
+   "got": "MOVE_NO_SIGN_FLIP"
+  },
+  {
+   "kind": "Different misconception",
+   "lines": [
+    "6 - (x + 2) = 3x",
+    "8 - x = 3x",
+    "x = 2"
+   ],
+   "expected": "DIST_FIRST_ONLY",
+   "got": "NEG_DIST_FIRST_ONLY"
+  },
+  {
+   "kind": "Different misconception",
+   "lines": [
+    "-3(x - 2) + 4 = 1",
+    "-4x + 6 + 4 = 1",
+    "x = 9/4"
+   ],
+   "expected": "ARITH_SLIP",
+   "got": "unclassified"
+  },
+  {
+   "kind": "Different misconception",
+   "lines": [
+    "5x + 3 = 2(x + 6)",
+    "6x + 3 = 2x + 12",
+    "x = 9/4"
+   ],
+   "expected": "ARITH_SLIP",
+   "got": "DIST_FIRST_ONLY"
+  },
+  {
+   "kind": "Different misconception",
+   "lines": [
+    "(x + 1)/4 = (x - 2)/3",
+    "4(x + 1) = 4(x - 2)"
+   ],
+   "expected": "ARITH_SLIP",
+   "got": "unclassified"
+  },
+  {
+   "kind": "Different misconception",
+   "lines": [
+    "(x + 1)/4 = (x - 2)/3",
+    "3(x + 1) = 4(x - 2)",
+    "4x + 3 = 4x - 8"
+   ],
+   "expected": "ARITH_SLIP",
+   "got": "unclassified"
+  },
+  {
+   "kind": "Different misconception",
+   "lines": [
+    "(x + 3)^2 = 16",
+    "x + 4 = ±4",
+    "x = -8 or x = 0"
+   ],
+   "expected": "ARITH_SLIP",
+   "got": "unclassified"
+  },
+  {
+   "kind": "Different misconception",
+   "lines": [
+    "x^2 - 5x + 6 = 0",
+    "(x - 3)(x - 3) = 0",
+    "x = 3"
+   ],
+   "expected": "ARITH_SLIP",
+   "got": "unclassified"
+  },
+  {
+   "kind": "Different misconception",
+   "lines": [
+    "x^2 - 5x + 6 = 0",
+    "(x - 2)(x - 3) = 0",
+    "x = 3 or x = 3",
+    "x = 3"
+   ],
+   "expected": "ARITH_SLIP",
+   "got": "unclassified"
+  },
+  {
+   "kind": "Different misconception",
+   "lines": [
+    "x^2 = 4x",
+    "x^3 - 4x = 0"
+   ],
+   "expected": "ARITH_SLIP",
+   "got": "unclassified"
+  },
+  {
+   "kind": "Different misconception",
+   "lines": [
+    "x^2 = 4x",
+    "x^2 - 4x = 0",
+    "x(x - 5) = 0",
+    "x = 0 or x = 5"
+   ],
+   "expected": "ARITH_SLIP",
+   "got": "unclassified"
+  }
+ ]
+}

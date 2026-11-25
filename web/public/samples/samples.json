@@ -1,0 +1,50 @@
+[
+  {
+    "id": "negative-bracket",
+    "title": "Linear \u00b7 brackets",
+    "problem": "Solve  5 - 2(x - 3) = 1",
+    "lines": [
+      "5 - 2(x - 3) = 1",
+      "5 - 2x - 6 = 1",
+      "-2x - 1 = 1",
+      "-2x = 2",
+      "x = -1"
+    ],
+    "expect": {
+      "first_error": 1,
+      "misconception": "NEG_DIST_FIRST_ONLY"
+    },
+    "image": "/samples/negative-bracket.jpg"
+  },
+  {
+    "id": "moving-terms",
+    "title": "Linear \u00b7 both sides",
+    "problem": "Solve  7x - 4 = 3x + 12",
+    "lines": [
+      "7x - 4 = 3x + 12",
+      "7x - 3x = 12 - 4",
+      "4x = 8",
+      "x = 2"
+    ],
+    "expect": {
+      "first_error": 1,
+      "misconception": "MOVE_NO_SIGN_FLIP"
+    },
+    "image": "/samples/moving-terms.jpg"
+  },
+  {
+    "id": "square-root",
+    "title": "Quadratic \u00b7 square root",
+    "problem": "Solve  (x - 2)^2 = 9",
+    "lines": [
+      "(x - 2)^2 = 9",
+      "x - 2 = 3",
+      "x = 5"
+    ],
+    "expect": {
+      "first_error": 1,
+      "misconception": "SQRT_LOST_NEG_ROOT"
+    },
+    "image": "/samples/square-root.jpg"
+  }
+]

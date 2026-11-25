@@ -1,0 +1,11 @@
+.venv
+**/.venv
+**/node_modules
+**/__pycache__
+**/.pytest_cache
+**/.ruff_cache
+web/dist
+engine/.env
+eval/fonts
+docs/screenshots
+HACKATHON_PROJECT_PLAN.md

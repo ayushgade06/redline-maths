@@ -1,0 +1,51 @@
+{
+ "recorded_at": "2026-11-25T16:47:51+00:00",
+ "model": "claude-opus-5-5",
+ "source": "web/public/samples/moving-terms.jpg",
+ "response": {
+  "problem": "7x - 4 = 3x + 12",
+  "lines": [
+   {
+    "ascii": "7x - 4 = 3x + 12",
+    "box_2d": [
+     190,
+     135,
+     315,
+     655
+    ],
+    "confidence": "high"
+   },
+   {
+    "ascii": "7x - 3x = 12 - 4",
+    "box_2d": [
+     400,
+     135,
+     480,
+     640
+    ],
+    "confidence": "high"
+   },
+   {
+    "ascii": "4x = 8",
+    "box_2d": [
+     570,
+     138,
+     640,
+     342
+    ],
+    "confidence": "high"
+   },
+   {
+    "ascii": "x = 2",
+    "box_2d": [
+     730,
+     138,
+     800,
+     308
+    ],
+    "confidence": "high"
+   }
+  ],
+  "notes": "The task statement \"Solve\" at the top was placed in problem. Line 2 is transcribed as written: 12 - 4 (sign error kept)."
+ }
+}

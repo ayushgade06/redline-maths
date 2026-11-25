@@ -1,0 +1,21 @@
+# secrets
+.env
+*.env.local
+# python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+# node
+node_modules/
+web/dist/
+# misc
+.DS_Store
+*.log
+
+# private planning notes (contains judge research) — kept out of the public repo
+HACKATHON_PROJECT_PLAN.md
+
+.vercel
+.env*

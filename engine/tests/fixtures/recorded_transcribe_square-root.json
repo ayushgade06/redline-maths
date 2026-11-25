@@ -1,0 +1,41 @@
+{
+ "recorded_at": "2026-11-25T16:47:51+00:00",
+ "model": "claude-opus-5-5",
+ "source": "web/public/samples/square-root.jpg",
+ "response": {
+  "problem": "(x-2)^2 = 9",
+  "lines": [
+   {
+    "ascii": "(x-2)^2 = 9",
+    "box_2d": [
+     245,
+     145,
+     385,
+     420
+    ],
+    "confidence": "high"
+   },
+   {
+    "ascii": "x-2 = 3",
+    "box_2d": [
+     475,
+     135,
+     565,
+     345
+    ],
+    "confidence": "high"
+   },
+   {
+    "ascii": "x = 5",
+    "box_2d": [
+     675,
+     140,
+     740,
+     260
+    ],
+    "confidence": "high"
+   }
+  ],
+  "notes": "Top line 'Solve (x-2)^2 = 9' treated as the problem statement."
+ }
+}
